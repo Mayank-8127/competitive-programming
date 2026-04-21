@@ -111,8 +111,14 @@ ll find_lcm(ll a,ll b) {
 
 
 void solve() {
-    int n;
+    string n;
     cin >> n;
+    int c0 = 0, c1 = 0;
+    for(int i = 0; i < n.size(); i++){
+        if(n[i] == '0') c0++;
+        else c1++;
+    }
+    cout << max(c1,c0)-min(c1,c0) << nl;
 }
 
 
